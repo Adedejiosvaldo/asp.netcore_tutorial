@@ -1,4 +1,6 @@
 using GameStore.API.Entities;
+const string GetGameEndpointName = "GetGameById";
+
 
 List<Game> games = new()
 {new Game
@@ -27,7 +29,8 @@ List<Game> games = new()
         Price = 49.99M,
         ReleaseDate = new DateTime(2018, 4, 20),
         ImageUri = "https://placehold.co/600x400/png"
-    }
+    },
+
 };
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,6 +47,14 @@ app.MapGet("/games/{id}",(int id)=>{
 return Results.NotFound();
     }
     return Results.Ok(game);
+}).WithName(GetGameEndpointName);
+
+
+app.MapPost("/games",(Game game) =>
+{
+    game.Id = games.Count+1;
+    games.Add(game);
+    return Results.CreatedAtRoute(GetGameEndpointName,new { id = game.Id}, game );
 });
 
 app.Run();
