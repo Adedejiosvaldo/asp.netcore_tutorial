@@ -57,4 +57,31 @@ app.MapPost("/games",(Game game) =>
     return Results.CreatedAtRoute(GetGameEndpointName,new { id = game.Id}, game );
 });
 
+app.MapPut("/games/{id}",(int id, Game updatedGame) =>
+{
+    Game? game = games.Find(game=>game.Id==id);
+    if (game is null)
+    {
+        return Results.NotFound();
+    }
+    game.Name = updatedGame.Name;
+    game.Genre = updatedGame.Genre;
+    game.Price = updatedGame.Price;
+    game.ReleaseDate = updatedGame.ReleaseDate;
+    game.ImageUri = updatedGame.ImageUri;
+    return Results.NoContent();
+});
+
+app.MapDelete("/games/{id}",(int id) =>
+{
+    Game? game = games.Find(game=>game.Id==id);
+    if (game is null)
+    {
+        return Results.NotFound();
+    }
+    games.Remove(game);
+    return Results.NoContent();
+});
+
+
 app.Run();

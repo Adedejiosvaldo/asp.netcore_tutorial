@@ -26,3 +26,4 @@
 /home/bluebird/coding_folder/backend/c#/game_store/GameStore.API/obj/Debug/net10.0/GameStore.API.pdb
 /home/bluebird/coding_folder/backend/c#/game_store/GameStore.API/obj/Debug/net10.0/GameStore.API.genruntimeconfig.cache
 /home/bluebird/coding_folder/backend/c#/game_store/GameStore.API/obj/Debug/net10.0/ref/GameStore.API.dll
+/home/bluebird/coding_folder/backend/c#/game_store/GameStore.API/obj/Debug/net10.0/GameStore.API.sourcelink.json
