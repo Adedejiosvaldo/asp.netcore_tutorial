@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dTox0S8DU+I=",
+  "dgSpecHash": "lZfjxeD9NJM=",
   "success": true,
   "projectFilePath": "/home/bluebird/coding_folder/backend/c#/game_store/GameStore.API/GameStore.API.csproj",
   "expectedPackageFiles": [
+    "/home/bluebird/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/bluebird/.nuget/packages/minimalapis.extensions/0.11.0/minimalapis.extensions.0.11.0.nupkg.sha512",
+    "/home/bluebird/.nuget/packages/minivalidation/0.8.0/minivalidation.0.8.0.nupkg.sha512",
     "/home/bluebird/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.0/microsoft.aspnetcore.app.ref.10.0.0.nupkg.sha512"
   ],
   "logs": []

@@ -37,7 +37,7 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 
-var group = app.MapGroup("/games");
+var group = app.MapGroup("/games").WithParameterValidation();
 
 app.MapGet("/", () => "Welcome to the Game Store API!");
 // API endpoint to get the list of games
